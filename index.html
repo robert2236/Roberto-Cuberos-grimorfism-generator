@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box</title>
+  <link rel="stylesheet" href="./style/normalize.css">
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="init-ms">
+  <h2 data-text="Por Muchas Cosas Que Perdamos Tenemos que Seguir Viviendo">Por Muchas Cosas Que Perdamos Tenemos que Seguir Viviendo<h2>
+  </div>
+  <div class="right">
+    <div class="box"></div>
+</div>
+<div class="left">
+    <div class="input">
+        <div class="lil-box">
+            <div class="box-container">
+                <h3>Select a color</h3>
+                <input type="color" class="color">
+            </div>
+     </div>
+        <div class="opacity lil-box range">
+            <div class="box-container">
+                <h3>Opacity</h3>
+                <div class="input-box">
+                    <input type="range"  name="range" type="range" min="0" max="100" value="100">
+                    <output class="opacity-output">100%</output>
+                </div>
+            </div>
+        </div>
+        <div class="blur lil-box range">
+            <div class="box-container">
+                <h3>Blurred</h3>
+                <div class="input-box">
+                    <input type="range"  name="range" type="range" min="0" max="100" value="0">
+                    <output class="blur-output">0px</output>
+                </div>
+            </div>
+        </div>
+        <div class="size lil-box range">
+            <div class="box-container">
+                <h3>Size</h3>
+                <div class="input-box">
+                    <input type="range"  name="range" type="range" min="0" max="500" value="300">
+                    <output class="size-output">300px</output>
+                </div>
+            </div>
+        </div>
+        <div class="radius lil-box range">
+            <div class="box-container">
+                <h3>Radius</h3>
+                <div class="input-box">
+                    <input type="range"  name="range" type="range" min="0" max="300" value="0">
+                    <output class="radius-output">0px</output>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+</body>
+<script src="./index.js"></script>
+</html>

@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2? family= Roboto:wght@100 & display=swap");
+
+:root {
+  --color-green: #54c16d;
+  --font-app: "Dancing Script", cursive;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+/*Custom Properties */
+
+cont-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+flex-box-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+flex-box-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body {
+  background-image: url(../Img/tanjiro.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-app);
+}
+
+h2 {
+  content: attr(data-text);
+  position: absolute;
+  top: -10rem;
+  left: 10rem;
+  bottom: 0rem;
+  width: 25%;
+  height: 25rem;
+  color: #5bff02dc;
+  border-right: 2px solid#4cf006e5;
+  -webkit-text-stroke: 1px #ff00ff;
+  overflow: hidden;
+  animation: animate 8s linear infinite;
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 2rem;
+  color: var(--color-green);
+}
+
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
+/* Box*/
+
+flex-box-center .right {
+  width: 60%;
+}
+.left {
+  width: 60%;
+  margin-top: 10rem;
+}
+.box {
+  /* background-color: rgba(255, 255, 255, 0.446); */
+  background-color: rgb(0, 0, 0);
+  width: 300px;
+  height: 300px;
+  margin-top: 14rem;
+
+  /* opacity: 50%; */
+}
+flex-box-column .input {
+  height: 30rem;
+}
+@media (max-width: 620px) {
+  body {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .right,
+  .left {
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20rem;
+  }
+  flex-box-center .input {
+    height: 100%;
+    gap: 6px;
+  }
+  .box {
+    width: 300px;
+    height: 300px;
+    max-width: 320px;
+    max-height: 320px;
+  }
+}
+flex-box-column .lil-box {
+  background-color: rgba(1, 16, 131, 0.227);
+  border-radius: 50px;
+  width: 300px;
+  height: 80px;
+  font-size: 13px;
+}
+flex-box-column .box-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3px 6px;
+  font-weight: lighter;
+  border-radius: 30px;
+  width: 300px;
+  height: 65px;
+  font-size: 13px;
+}
+.box-container > h3 {
+  color: #ffdbf6d8;
+}
+.input-box {
+  width: 97%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 15px;
+  font-weight: bold;
+}
+input[type="color"] {
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+}
+input[type="range"] {
+  width: 80%;
+}
+.range input[type="range"],
+.range input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.range input[type="range"],
+.range__input-fill {
+  border-radius: 0.25em;
+  height: 0.5em;
+}
+.range input[type="range"] {
+  background-color: rgba(39, 206, 240, 0.807); /*rgba(244, 228, 248, 0.645)*/
+  display: block;
+  margin: 0.5em 0;
+  padding: 0;
+}
+.range input[type="range"]:focus {
+  outline: transparent;
+}
+.range input[type="range"]::-webkit-slider-thumb {
+  background-color: rgb(6, 247, 26); /*rgba(108, 17, 143, 1)*/
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 17px;
+  height: 17px;
+}
+output {
+  color: white;
+}
+@media (max-width: 620px) {
+  .lil-box {
+    background-color: rgba(255, 255, 255, 0.296);
+    width: 80%;
+    height: 15%;
+  }
+  .box-container {
+    width: 100%;
+    height: 100%;
+  }
+  .box-container > h3 {
+    font-size: 11px;
+    line-height: 0px;
+    color: white;
+  }
+  .input {
+    height: 100%;
+    justify-content: center;
+    gap: 5px;
+  }
+  input[type="color"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 0px;
+    /* margin-bottom: 20px; */
+  }
+  input[type="range"] {
+    width: 80%;
+  }
+  output {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 46rem) {
+  body {
+    height: 15vh;
+    background-image: url(../Img/tanjiro-mobile.jpg);
+  }
+  h2 {
+    height: 10%;
+    margin-left: auto;
+    margin-right: o;
+    margin-top: 12rem;
+    width: 100%;
+  }
+
+  input.color {
+    margin-left: 1rem;
+  }
+
+  .box {
+    margin-top: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .input {
+    height: 25rem;
+    margin-top: 15rem;
+    padding-left: 8rem;
+  }
+}
+
+@media (max-width: 35rem) {
+  body {
+    height: 100rem;
+  }
+  .input {
+    margin-top: -10rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  h2 {
+    margin-left: 0.1rem;
+    text-align: center;
+    height: 50%;
+  }
+}
