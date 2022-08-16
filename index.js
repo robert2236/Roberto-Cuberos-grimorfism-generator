@@ -60,3 +60,13 @@ radius.addEventListener("input", (e) => {
   box.style.borderRadius = `${e.target.value}px`;
   radiusOut.value = `${e.target.value}px`;
 });
+contrasting.addEventListener("input", (e) => {
+  contrast = e.target.value;
+  box.style.cssText += `backdrop-filter: contrast(${contrast}%)`;
+  contrastingOut.value = `${e.target.value}px`;
+});
+saturation.addEventListener("input", (e) => {
+  saturate = e.target.value;
+  box.style.cssText += `backdrop-filter: saturate(${saturate}%)`;
+  saturationOut.value = `${e.target.value}px`;
+});
